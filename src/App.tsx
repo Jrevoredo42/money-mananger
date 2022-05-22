@@ -9,7 +9,7 @@ Modal.setAppElement('#root');
 
 export function App () {
 
-const [isNewTansactionOpen, setIsNewTransactionModalOpen] = useState(false);
+const [isNewTansactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
     function handleOpenNewTransactionModal(){
         setIsNewTransactionModalOpen(true);
@@ -27,7 +27,7 @@ const [isNewTansactionOpen, setIsNewTransactionModalOpen] = useState(false);
       <Dashboard/>
 
       <NewTransactionModal
-        isOpen={isNewTansactionOpen}
+        isOpen={isNewTansactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
       />
       
