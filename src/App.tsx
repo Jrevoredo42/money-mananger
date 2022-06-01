@@ -1,3 +1,4 @@
+import { TransactionsProvider } from '../TransactionsContext';
 import { GlobalStyle } from './styles/global';
 import { Header } from '../src/components/Header'
 import { Dashboard } from './components/Dashboard';
@@ -22,7 +23,7 @@ const [isNewTansactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
 
 
   return (
-       <>
+       <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} /> 
       <Dashboard/>
 
@@ -32,6 +33,6 @@ const [isNewTansactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
       />
       
     <GlobalStyle/>
-        </>
+        </TransactionsProvider>
   )
 }
